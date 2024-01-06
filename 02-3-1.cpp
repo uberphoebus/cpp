@@ -25,7 +25,7 @@ int main(void) {
   int **pptr = &ptr;
 
   int &ref = num;
-  int *(&pref) = ptr;
+  int *(&pref) = ptr; // referenc of pointer var
   int **(&ppref) = pptr;
 
   cout << ref << endl;
