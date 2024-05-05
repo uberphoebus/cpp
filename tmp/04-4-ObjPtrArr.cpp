@@ -34,25 +34,39 @@ public:
 };
 
 int main(void) {
-  Person parr[3]; // 객체 배열 선언시에 생성자 모두 호출됨
+  // Person parr[3]; // 객체 배열 선언시에 생성자 모두 호출됨
+  Person *parr[3];
   char namestr[100];
-  char *strptr;
+  // char *strptr;
   int age;
-  int len;
+  // int len;
 
   for (int i = 0; i < 3; i++) {
     cout << "이름: ";
     cin >> namestr;
     cout << "나이: ";
     cin >> age;
-    len = strlen(namestr) + 1;
-    strptr = new char[len];
-    strcpy(strptr, namestr);
-    parr[i].SetPersonInfo(strptr, age);
+
+    // len = strlen(namestr) + 1;
+    // strptr = new char[len];
+    // strcpy(strptr, namestr);
+    // parr[i].SetPersonInfo(strptr, age);
+
+    parr[i] = new Person(namestr, age);
   }
 
-  parr[0].ShowPersonInfo();
-  parr[1].ShowPersonInfo();
-  parr[2].ShowPersonInfo();
+  // parr[0].ShowPersonInfo();
+  // parr[1].ShowPersonInfo();
+  // parr[2].ShowPersonInfo();
+
+  parr[0]->ShowPersonInfo();
+  parr[1]->ShowPersonInfo();
+  parr[2]->ShowPersonInfo();
+
+  // delete[] parr;
+  delete parr[0];
+  delete parr[1];
+  delete parr[2];
+
   return 0;
 }
