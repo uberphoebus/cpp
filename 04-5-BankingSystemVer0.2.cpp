@@ -3,6 +3,9 @@
 using namespace std;
 const uint8_t NAME_LEN = 20;
 
+#define TEST_NUM1 100
+#define TEST_NUM2 1000000000000000000
+
 // Function prototypes
 void showTitle(void);
 void showMenu(void);
@@ -27,6 +30,12 @@ public:
     strcpy(this->cusName, cusName);
   }
 
+  // add copy constructor
+  Account(const Account &ref) : accID(ref.accID), balance(ref.balance) {
+    cusName = new char[NAME_LEN];
+    strcpy(cusName, ref.cusName);
+  }
+
   int getAccID(void) { return accID; }
 
   void deposit(int money) { balance += money; }
@@ -37,6 +46,7 @@ public:
     balance -= money;
     return money;
   }
+
   void showAccInfo(void) {
     cout << "AccountID : " << accID << endl;
     cout << "Name      : " << cusName << endl;
@@ -51,10 +61,10 @@ uint8_t accNum = 0;
 
 // main function
 int main(void) {
+
   showTitle();
 
   int32_t choice;
-
   while (1) {
     showMenu();
     cout << "choice : ";
