@@ -1,0 +1,6 @@
+/workspaces/cpp/modu/CMakeLib/build/CMakeFiles/rebuild_cache.dir
+/workspaces/cpp/modu/CMakeLib/build/CMakeFiles/edit_cache.dir
+/workspaces/cpp/modu/CMakeLib/build/CMakeFiles/program.dir
+/workspaces/cpp/modu/CMakeLib/build/lib/CMakeFiles/rebuild_cache.dir
+/workspaces/cpp/modu/CMakeLib/build/lib/CMakeFiles/edit_cache.dir
+/workspaces/cpp/modu/CMakeLib/build/lib/CMakeFiles/shape.dir

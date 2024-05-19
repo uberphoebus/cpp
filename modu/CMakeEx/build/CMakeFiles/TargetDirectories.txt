@@ -1,0 +1,3 @@
+/workspaces/cpp/modu/CMakeEx/build/CMakeFiles/rebuild_cache.dir
+/workspaces/cpp/modu/CMakeEx/build/CMakeFiles/edit_cache.dir
+/workspaces/cpp/modu/CMakeEx/build/CMakeFiles/program.dir
